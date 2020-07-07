@@ -85,7 +85,7 @@ class Profile extends Component {
 
     axios.delete('/users/delete', config)
     .then(res => {
-      alert('Conta deletada com sucesso!');
+      alert('Account deleted successfully!');
       logout();
     })
     .catch(err => console.log(err));
@@ -113,12 +113,12 @@ class Profile extends Component {
     return (
       <React.Fragment>
         <Typography variant="subheading" color="textSecondary" noWrap>
-          Meu Perfil
+          My Profile
         </Typography>
         <form onSubmit={this.handleUpdate} className={classes.root}>
           {/* NAME */}
           <FormControl className={[classes.margin, classes.fill].join(' ')}>
-            <InputLabel htmlFor="input-name">Nome Completo</InputLabel>
+            <InputLabel htmlFor="input-name">Full Name</InputLabel>
             <Input
               id="input-name"
               name="name"
@@ -190,7 +190,7 @@ class Profile extends Component {
           ContentProps={{
             'aria-describedby': 'message-id',
           }}
-          message={<span id="message-id">Perfil Atualizado</span>}
+          message={<span id="message-id">Updated Profile</span>}
           action={[
             <IconButton
               key="close"

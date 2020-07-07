@@ -91,7 +91,7 @@ class Login extends Component {
               message,
             });
           } else {
-            this.handleOpenDialog(message, 'Agora você já pode fazer login com seu email e senha na tela inicial :D');
+            this.handleOpenDialog(message, 'Now you can login with your email and password on the home screen:');
           }
         })
         .catch(err => console.log(err));
@@ -145,7 +145,7 @@ class Login extends Component {
             error={this.state.beforeSubmitError && this.state.name === '' ? true : false}
             aria-describedby="passowrd-error-text"
           >
-            <InputLabel htmlFor="input-name">Nome Completo</InputLabel>
+            <InputLabel htmlFor="input-name">Full name</InputLabel>
             <Input
               id="input-name"
               name="name"
@@ -154,7 +154,7 @@ class Login extends Component {
               onChange={this.handleChange('name')}
             />
             {(this.state.beforeSubmitError && this.state.name === '') &&
-              <FormHelperText id="password-error-text">Preencha o nome</FormHelperText>
+              <FormHelperText id="password-error-text">Fill in the name</FormHelperText>
             }
           </FormControl>
           {/* EMAIL */}
@@ -175,10 +175,10 @@ class Login extends Component {
               onChange={this.handleChange('email')}
             />
             {((error.status === 'EMAIL_ALREADY_EXISTS') || (this.state.beforeSubmitError && this.state.name === '')) &&
-              <FormHelperText id="email-error-text">{error.message || 'Preencha o email'}</FormHelperText>
+              <FormHelperText id="email-error-text">{error.message || 'Fill in the email'}</FormHelperText>
             }
           </FormControl>
-          {/* DATA NASCIMENTO */}
+          {/* Birth Date */}
           <FormControl
             className={[classes.margin, classes.fill].join(' ')}
             error={(this.state.beforeSubmitError && this.state.birthDate === '') ? true : false}
@@ -197,7 +197,7 @@ class Login extends Component {
               />
             </MuiPickersUtilsProvider>
             {(this.state.beforeSubmitError && this.state.birthDate === '') &&
-              <FormHelperText id="birthdate-error-text">Preencha a data de nascimento</FormHelperText>
+              <FormHelperText id="birthdate-error-text">Fill in the date of birth</FormHelperText>
             }
           </FormControl>
 
@@ -231,10 +231,10 @@ class Login extends Component {
           </FormControl>
           <Button color="default" component={Link} to="/login" variant="flat" className={classes.margin}>
             <ChevronLeft className={classes.rightIcon} />
-            Voltar
+            Come back
           </Button>
           <Button type="submit" variant="raised" color="primary" className={classes.margin}>
-            Continuar
+            Continue
           </Button>
         </form>
         <Dialog
@@ -251,7 +251,7 @@ class Login extends Component {
           </DialogContent>
           <DialogActions>
             <Button onClick={() => this.props.history.replace('/login')} color="primary" autoFocus>
-              Continuar
+              Continue
             </Button>
           </DialogActions>
         </Dialog>

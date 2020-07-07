@@ -63,8 +63,8 @@ class Users extends Component {
                 </TableCell>
                 <TableCell>Nome</TableCell>
                 <TableCell>Email</TableCell>
-                <TableCell>Criado em</TableCell>
-                <TableCell>Data Nascimento</TableCell>
+                <TableCell>Created On</TableCell>
+                <TableCell>Birth Date</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
