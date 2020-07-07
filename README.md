@@ -1,4 +1,4 @@
-## Aplicação fullstack using MongoDB, NodeJs, React e Redux
+## Application fullstack using MongoDB, NodeJs, React e Redux
 <p align="center">
   <img src="https://img.shields.io/badge/Mongoose-5.1.1-blue.svg?colorB=449a45">
   <img src="https://img.shields.io/badge/React-16.3.2-blue.svg">
